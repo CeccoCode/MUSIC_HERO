@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+
+
+.navbar {
+    background-color: #507dbc;
+    border-bottom: 1px solid #507dbc;
+    background: transparent;
+
+}
+
+.center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.link {
+    display: flex;
+    gap: 15px;
+}
+
+.link a,
+.icon {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    font-weight: 300;
+    font-size: large;
+    align-items: center;
+    transition: 0.7s;
+}
+
+.icon {
+    fill: white;
+    transition: 0.7s;
+}
+
+.link a:hover,
+.icon:hover {
+    color: #507dbc;
+    fill: #507dbc;
+}

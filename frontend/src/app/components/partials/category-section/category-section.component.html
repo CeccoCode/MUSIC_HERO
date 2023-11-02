@@ -1,0 +1,8 @@
+<div class="container">
+    <div *ngFor="let category of categories"
+        [style.background]="'url(' + category.imageUrl + ') no-repeat 50% / cover'">
+        <div class="content">
+            <h2>{{ category.name }}</h2>
+        </div>
+    </div>
+</div>
