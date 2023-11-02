@@ -1,4 +1,5 @@
 import { Category } from "./app/shared/models/Category";
+import { Product } from "./app/shared/models/Product";
 
 
 export const sample_category: Category[] = [
@@ -44,4 +45,16 @@ export const sample_category: Category[] = [
         properties: [],
         imageUrl: 'assets/spartiti.jpg',
     },
+]
+
+
+export const sample_product: Product[] = [
+    {
+        title: 'Chitarra lavami',
+        description: "sono un prodotto ottimo",
+        price: 3,
+        images: ['assets/chitarra.jpg'],
+        category: '',
+    },
+
 ]
