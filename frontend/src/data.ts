@@ -1,5 +1,5 @@
-import { Category } from "./app/shared/models/Category";
-import { Product } from "./app/shared/models/Product";
+import { Category } from "../../frontend/src/app/shared/models/Category";
+import { Product } from "../../frontend/src/app/shared/models/Product";
 
 
 export const sample_category: Category[] = [

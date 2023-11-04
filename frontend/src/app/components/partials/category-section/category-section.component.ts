@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { CategoryService } from 'src/app/services/category.service';
 import { Category } from 'src/app/shared/models/Category';
 
@@ -11,7 +12,12 @@ export class CategorySectionComponent implements OnInit {
 
   categories: Category[] = [];
   constructor(private categoryService: CategoryService) {
-    this.categories = categoryService.getAll();
+    let categoryObservable: Observable<Category[]>
+    categoryObservable = categoryService.getAllParent();
+
+    categoryObservable.subscribe((serverCategories) => {
+      this.categories = serverCategories;
+    })
   }
 
   ngOnInit(): void {
