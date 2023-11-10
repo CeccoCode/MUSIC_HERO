@@ -41,12 +41,6 @@ const sample_category = [
         properties: [],
         imageUrl: 'assets/spartiti.jpg',
     },
-    {
-        name: 'Strumenti',
-        parent: null,
-        properties: [],
-        imageUrl: 'assets/chitarra.jpg',
-    },
 ];
 
 module.exports = { sample_category };
