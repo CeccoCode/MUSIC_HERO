@@ -1,13 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 
-* {
-    margin-top: 20px;
-    padding: 0;
-    box-sizing: border-box;
+
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
 }
 
+.center {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
 
-/* Stili per il contenitore generico */
 .container {
     width: 100%;
     display: flex;
@@ -25,10 +34,8 @@
     box-shadow: 1px 5px 15px #1e0e3e;
     position: relative;
     overflow: hidden;
-
 }
 
-/* Stili per il contenuto generico */
 .container>div .content {
     font-size: 1.5rem;
     color: #fff;
@@ -44,7 +51,6 @@
             rgba(2, 2, 46, 0.6755077030812324) 0%,
             rgba(255, 255, 255, 0) 100%);
     transform: translateY(100%);
-    /* Parte dal basso */
     transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
     visibility: hidden;
 }

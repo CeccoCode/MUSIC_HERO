@@ -7,133 +7,85 @@
 
 
 .grid {
+    margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 10px;
-    /* Spazio tra le colonne */
     justify-content: center;
 }
 
 .card {
-    position: relative;
-    width: 100%;
-    /* Riempie l'intera larghezza della cella della griglia */
-    height: 7.5em;
-    transition: .4s ease-in-out;
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
-    overflow: hidden;
-    margin: 20px;
-    /* Margine simmetrico tutto intorno */
-    background-size: cover;
-    background-position: center;
+    margin-top: 20px;
+    max-width: 12em;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: #507dbc;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: .3s;
 }
 
-
-.heading {
-    position: relative;
-    color: black;
-    font-weight: bold;
-    font-size: 1.1em;
-    padding-top: 1em;
-    padding-left: 1em;
-    transition: .4s ease-in-out;
+.card img {
+    max-width: 100%;
 }
 
-.details {
-    position: relative;
-    color: black;
-    font-size: 0.6em;
-    padding-top: 1.5em;
-    padding-left: 2em;
-    transition: .4s ease-in-out;
+.card h4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3em;
+    margin: .5em 0;
+    cursor: pointer;
+}
+
+.card div {
+    padding-top: 5px;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
 }
 
 .price {
-    position: relative;
-    color: black;
-    font-weight: bold;
-    font-size: 0.8em;
-    padding-top: 1.5em;
-    padding-left: 1.5em;
-    top: 9.6em;
-    left: 5em;
-    transition: .4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    /* Aggiunto per allineare il prezzo sotto il titolo */
+    align-items: center;
 }
 
-.btn1 {
-    position: relative;
+.card div span {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.card button {
     border: none;
-    outline: none;
-    background-color: rgb(37, 37, 37);
-    color: white;
-    font-size: 0.6em;
-    padding-left: 6.9em;
-    padding-right: 6.9em;
-    padding-top: 0.8em;
-    padding-bottom: 0.85em;
-    border-radius: 10px;
-    left: 2.6em;
-    top: 14.8em;
-    transition: .4s ease-in-out;
-    font-weight: bold;
-}
-
-.btn1:hover {
-    background-color: rgb(63, 73, 216);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1em;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.btn2 {
-    position: relative;
-    border: none;
-    outline: none;
-    background-color: rgb(37, 37, 37);
-    color: white;
-    font-size: 0.6em;
-    padding-left: 5.1em;
-    padding-right: 5.1em;
-    padding-top: 0.8em;
-    padding-bottom: 0.85em;
-    border-radius: 10px;
-    left: 2.6em;
-    top: 15.5em;
-    transition: .4s ease-in-out;
-    font-weight: bold;
+.card button.btn-1 {
+    background-color: black;
+    color: #fff;
+    fill: #fff;
 }
 
-.btn2:hover {
-    background-color: rgb(63, 73, 216);
-    cursor: pointer;
-}
-
-.glasses {
-    position: relative;
-    top: -4em;
-    left: 9.5em;
-    width: 70px;
-    height: 70px;
-    transition: .4s ease-in-out;
-}
 
 .card:hover {
-    width: 12.5em;
-    height: 23em;
-    transform: translateY(1.25em);
+    background-color: #E0B09F;
+    color: #fff;
 }
 
-.card:hover+.glasses {
-    transform: rotateX(360deg);
-    height: 100px;
-    width: 100px;
-    left: 3em;
-    top: -18em;
-}
-
-.card:hover .heading {
-    transform: translateY(7em) translateX(2.3em);
-}
-
-.card:hover .details {
-    transform: translateY(13em) translateX(3.5em);
+.card:hover button {
+    color: black;
+    background-color: #fff;
+    fill: black;
 }

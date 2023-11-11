@@ -2,6 +2,7 @@
 
 
 .navbar {
+    position: fixed;
     background-color: #507dbc;
     border-bottom: 1px solid #507dbc;
     background: transparent;
