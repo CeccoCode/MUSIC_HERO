@@ -1,13 +1,17 @@
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+    background: #507dbc;
+}
+
 .center {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    height: 700px;
 }
 
 
 .grid {
-    margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
@@ -15,7 +19,7 @@
 }
 
 .card {
-    margin-top: 20px;
+    margin-bottom: 10px;
     max-width: 12em;
     background-color: #fff;
     padding: 1em;

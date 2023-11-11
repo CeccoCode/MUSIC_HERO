@@ -1,55 +1,60 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-
-.navbar {
-    position: fixed;
-    background-color: #507dbc;
-    border-bottom: 1px solid #507dbc;
-    background: transparent;
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
 }
 
-.center {
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    z-index: 100;
 }
 
 .logo {
-    position: relative;
-    text-align: center;
-    text-decoration: none;
+    font-size: 1.8rem;
+    color: #ededed;
+    font-weight: 600;
 }
 
-.logo a {
-    text-decoration: none;
-    color: white;
+.navbar a {
+    font-size: 1.2rem;
+    color: #ededed;
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: .3s;
 }
 
-.link {
-    display: flex;
-    gap: 15px;
+.navbar a svg {
+    fill: #ededed;
+    vertical-align: middle;
+    transition: .3s;
 }
 
-.link a,
-.icon {
-    text-decoration: none;
-    color: white;
-    display: flex;
-    font-weight: 300;
-    font-size: large;
-    align-items: center;
-    transition: 0.7s;
+
+.navbar a svg:hover,
+.navbar a:hover,
+.navbar a.active {
+    color: #00abf0;
+    fill: #00abf0;
 }
 
-.icon {
-    fill: white;
-    transition: 0.7s;
-}
-
-.link a:hover,
-.icon:hover {
-    color: #507dbc;
-    fill: #507dbc;
+#menu-icon {
+    font-size: 3.6rem;
+    color: #ededed;
+    cursor: pointer;
+    display: none;
 }
