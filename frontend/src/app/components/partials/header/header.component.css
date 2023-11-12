@@ -44,11 +44,25 @@
     transition: .3s;
 }
 
-
-.navbar a svg:hover,
-.navbar a:hover,
+/* Rimuovi il colore di default dal link attivo */
 .navbar a.active {
+    color: unset;
+}
+
+/* Aggiungi il colore al testo del link attivo */
+.navbar a.active,
+.navbar a:hover {
     color: #00abf0;
+}
+
+/* Rimuovi il colore di default dall'icona del link attivo */
+.navbar a.active svg {
+    fill: unset;
+}
+
+/* Aggiungi il colore all'icona del link attivo */
+.navbar a.active svg,
+.navbar a:hover svg {
     fill: #00abf0;
 }
 
