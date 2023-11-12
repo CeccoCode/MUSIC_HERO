@@ -7,6 +7,9 @@ import { HeaderComponent } from './components/partials/header/header.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { CategorySectionComponent } from './components/partials/category-section/category-section.component';
 import { ProductsGridComponent } from './components/partials/products-grid/products-grid.component';
+import { ProductsComponent } from './components/pages/products/products.component';
+import { RouterModule, Routes } from '@angular/router';
+import { ProductCardComponent } from './components/partials/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -14,12 +17,15 @@ import { ProductsGridComponent } from './components/partials/products-grid/produ
     HeaderComponent,
     HomeComponent,
     CategorySectionComponent,
-    ProductsGridComponent
+    ProductsGridComponent,
+    ProductsComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
