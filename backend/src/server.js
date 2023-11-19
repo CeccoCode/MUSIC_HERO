@@ -25,10 +25,10 @@ app.get("/api/categories/parent", (req, res) => {
     res.send(categories);
 });
 
-console.log(sample_product);
 app.get("/api/products", (req, res) => {
     res.send(sample_product);
 })
+
 
 // Avvia il server  
 const port = process.env.PORT || 3000;

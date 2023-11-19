@@ -10,6 +10,7 @@ import { ProductsGridComponent } from './components/partials/products-grid/produ
 import { ProductsComponent } from './components/pages/products/products.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductCardComponent } from './components/partials/product-card/product-card.component';
+import { FeaturedComponent } from './components/partials/featured/featured.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ProductCardComponent } from './components/partials/product-card/product
     CategorySectionComponent,
     ProductsGridComponent,
     ProductsComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    FeaturedComponent
   ],
   imports: [
     BrowserModule,

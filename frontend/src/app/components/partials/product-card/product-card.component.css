@@ -4,8 +4,8 @@
     background-color: #fff;
     padding: 1em;
     border-radius: 10px;
-    box-shadow: #507dbc;
     font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
     transition: .3s;
 }
 
@@ -20,7 +20,6 @@
     justify-content: center;
     font-size: 1.3em;
     margin: .5em 0;
-    cursor: pointer;
 }
 
 .card div {
@@ -35,7 +34,6 @@
 .price {
     display: flex;
     flex-direction: column;
-    /* Aggiunto per allineare il prezzo sotto il titolo */
     align-items: center;
 }
 
@@ -54,22 +52,38 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: white;
+
 }
 
-.card button.btn-1 {
-    background-color: black;
-    color: #fff;
-    fill: #fff;
+.card button:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 3px 15px #507dbc;
 }
-
 
 .card:hover {
-    background-color: #E0B09F;
-    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 1px 3px 15px #507dbc;
+
 }
 
-.card:hover button {
-    color: black;
-    background-color: #fff;
-    fill: black;
+.btn-1 {
+    fill: green;
+    transition: .3s;
+}
+
+.card:hover .btn-1 {
+    background-color: white;
+    fill: green;
+}
+
+.favorite {
+    background-color: white;
+    fill: rgb(189, 14, 14);
+    transition: .3s;
+}
+
+.card:hover .favorite {
+    background-color: white;
+    fill: rgb(189, 14, 14);
 }
