@@ -1,12 +1,15 @@
 .card {
+    border: 1px solid #507dbc;
     margin-bottom: 10px;
     width: 12em;
     background-color: #fff;
     padding: 1em;
     border-radius: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    transition: .5s;
+}
+
+span {
     cursor: pointer;
-    transition: .3s;
 }
 
 .card img {
@@ -43,7 +46,6 @@
 }
 
 .card button {
-    border: none;
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -53,7 +55,6 @@
     align-items: center;
     justify-content: center;
     background-color: white;
-
 }
 
 .card button:hover {
@@ -64,26 +65,22 @@
 .card:hover {
     transform: scale(1.1);
     box-shadow: 1px 3px 15px #507dbc;
-
+    border: none;
 }
 
 .btn-1 {
+    border: 1px solid green;
     fill: green;
     transition: .3s;
 }
 
 .card:hover .btn-1 {
-    background-color: white;
-    fill: green;
+    background-color: green;
+    fill: white;
 }
 
 .favorite {
-    background-color: white;
+    border: none;
     fill: rgb(189, 14, 14);
     transition: .3s;
-}
-
-.card:hover .favorite {
-    background-color: white;
-    fill: rgb(189, 14, 14);
 }

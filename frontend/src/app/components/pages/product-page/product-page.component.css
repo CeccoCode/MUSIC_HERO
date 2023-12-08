@@ -1,0 +1,50 @@
+* {
+    color: white;
+}
+
+.center {
+    margin-top: 100px;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.col-wrapper {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.white-box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+
+.big-image-wr {
+    text-align: center;
+}
+
+.big-image {
+    max-width: 500px;
+    max-height: 1000px;
+    width: auto;
+    height: auto;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.price-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.price {
+    font-size: 1.4rem;
+    color: white;
+}

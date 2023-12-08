@@ -11,6 +11,9 @@ import { ProductsComponent } from './components/pages/products/products.componen
 import { RouterModule, Routes } from '@angular/router';
 import { ProductCardComponent } from './components/partials/product-card/product-card.component';
 import { FeaturedComponent } from './components/partials/featured/featured.component';
+import { ProductPageComponent } from './components/pages/product-page/product-page.component';
+import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
+import { TitleComponent } from './components/partials/title/title.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { FeaturedComponent } from './components/partials/featured/featured.compo
     ProductsGridComponent,
     ProductsComponent,
     ProductCardComponent,
-    FeaturedComponent
+    FeaturedComponent,
+    ProductPageComponent,
+    CartPageComponent,
+    TitleComponent
   ],
   imports: [
     BrowserModule,

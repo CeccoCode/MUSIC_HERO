@@ -1,14 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
 }
 
 .header {
@@ -16,8 +9,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 9%;
-    background: transparent;
+    padding: .8rem 9%;
+    background: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,50 +18,48 @@
 }
 
 .logo {
+    text-decoration: none;
     font-size: 1.8rem;
-    color: #ededed;
+    color: black;
     font-weight: 600;
+}
+
+.navbar {
+    display: flex;
 }
 
 .navbar a {
     font-size: 1.2rem;
-    color: #ededed;
+    color: black;
     font-weight: 500;
-    margin-left: 3.5rem;
-    transition: .3s;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: 0.3s;
 }
 
-.navbar a svg {
-    fill: #ededed;
-    vertical-align: middle;
-    transition: .3s;
-}
-
-/* Rimuovi il colore di default dal link attivo */
-.navbar a.active {
-    color: unset;
-}
-
-/* Aggiungi il colore al testo del link attivo */
-.navbar a.active,
 .navbar a:hover {
-    color: #00abf0;
+    background-color: rgb(225, 225, 225);
 }
 
-/* Rimuovi il colore di default dall'icona del link attivo */
-.navbar a.active svg {
-    fill: unset;
+.actions {
+    display: flex;
+    align-items: center;
 }
 
-/* Aggiungi il colore all'icona del link attivo */
-.navbar a.active svg,
-.navbar a:hover svg {
-    fill: #00abf0;
-}
-
-#menu-icon {
-    font-size: 3.6rem;
-    color: #ededed;
+.actions a {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1em;
     cursor: pointer;
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transition: .3s;
+}
+
+.actions a:hover {
+    background-color: rgb(225, 225, 225);
 }

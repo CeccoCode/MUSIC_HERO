@@ -14,7 +14,7 @@ export class ProductsGridComponent implements OnInit {
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.productService.getAll().subscribe((serverProducts) => {
+    this.productService.getLastFeatured().subscribe((serverProducts) => {
       this.products = serverProducts;
     });
   }

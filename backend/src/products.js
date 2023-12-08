@@ -1,5 +1,6 @@
 const sample_product = [
     {
+        _id: '1234',
         title: 'product title',
         description: "sono un prodotto ottimo",
         price: 249.9,
@@ -8,6 +9,7 @@ const sample_product = [
         favorite: 1,
     },
     {
+        _id: '12345',
         title: 'product title',
         description: "sono un prodotto ottimo",
         price: 198.4,
@@ -16,6 +18,7 @@ const sample_product = [
         favorite: 1,
     },
     {
+        _id: '123487',
         title: 'product title',
         description: "sono un prodotto ottimo",
         price: 98.5,
@@ -24,6 +27,7 @@ const sample_product = [
         favorite: 0,
     },
     {
+        _id: '68970',
         title: 'product title',
         description: "sono un prodotto ottimo",
         price: 799,
@@ -32,6 +36,7 @@ const sample_product = [
         favorite: 0,
     },
     {
+        _id: '090733',
         title: 'product title',
         description: "sono un prodotto ottimo",
         price: 900,
@@ -40,6 +45,7 @@ const sample_product = [
         favorite: 1,
     },
     {
+        _id: '347687',
         title: 'product title',
         description: "sono un prodotto ottimo",
         price: 198.4,

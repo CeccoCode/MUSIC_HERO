@@ -1,0 +1,46 @@
+<app-title title="Cart Page"></app-title>
+<div class="container">
+    <ul>
+        <li *ngFor="let cartItem of cart.items">
+            <div>
+                <img [src]="cartItem.product.images">
+            </div>
+            <div>
+                <a routerLink="/product/{{cartItem.product._id}}">
+                    {{cartItem.product.title}}
+                </a>
+            </div>
+            <div>
+                <select #quantitySelect [value]="cartItem.quantity"
+                    (change)="changeQuantity(cartItem, quantitySelect.value)">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div>
+                {{cartItem.price | currency}}
+            </div>
+
+            <div>
+                <button class="remove-button" (click)="removeFromCart(cartItem)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        style="fill: rgb(175, 5, 5);">
+                        <path
+                            d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </li>
+    </ul>
+    <div class="checkout">
+        <div>
+            <div class="product-count">{{cart.totalCount}}</div>
+            <div class="total-price">{{cart.totalPrice|currency}}></div>
+        </div>
+        <a routerLink="/checkout">Procedi al pagamento</a>
+    </div>
+</div>

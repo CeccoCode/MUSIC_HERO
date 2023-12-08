@@ -8,87 +8,26 @@ section {
     margin: 0 auto;
 }
 
+.text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text h4 {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.text h4:hover {
+    background-color: rgb(225, 225, 225);
+}
 
 .grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
     justify-content: center;
-}
-
-.card {
-    margin-bottom: 10px;
-    width: 12em;
-    background-color: #fff;
-    padding: 1em;
-    border-radius: 10px;
-    box-shadow: #507dbc;
-    font-family: Arial, Helvetica, sans-serif;
-    transition: .3s;
-    box-shadow: 1px 3px 15px #507dbc;
-}
-
-.card img {
-    max-width: 100%;
-}
-
-.card h4 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3em;
-    margin: .5em 0;
-    cursor: pointer;
-}
-
-.card div {
-    padding-top: 5px;
-    font-size: 1.2em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-}
-
-.price {
-    display: flex;
-    flex-direction: column;
-    /* Aggiunto per allineare il prezzo sotto il titolo */
-    align-items: center;
-}
-
-.card div span {
-    font-size: 1em;
-    font-weight: 500;
-}
-
-.card button {
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 1em;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.card button.btn-1 {
-    background-color: black;
-    color: #fff;
-    fill: #fff;
-}
-
-
-.card:hover {
-    background-color: #E0B09F;
-    color: #fff;
-}
-
-.card:hover button {
-    color: black;
-    background-color: #fff;
-    fill: black;
 }
