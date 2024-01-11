@@ -10,10 +10,13 @@ import { ProductsGridComponent } from './components/partials/products-grid/produ
 import { ProductsComponent } from './components/pages/products/products.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductCardComponent } from './components/partials/product-card/product-card.component';
-import { FeaturedComponent } from './components/partials/featured/featured.component';
 import { ProductPageComponent } from './components/pages/product-page/product-page.component';
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
 import { TitleComponent } from './components/partials/title/title.component';
+import { LoginModalComponent } from './components/partials/login-modal/login-modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,16 +27,23 @@ import { TitleComponent } from './components/partials/title/title.component';
     ProductsGridComponent,
     ProductsComponent,
     ProductCardComponent,
-    FeaturedComponent,
     ProductPageComponent,
     CartPageComponent,
-    TitleComponent
+    TitleComponent,
+    LoginModalComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     RouterModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-bottom-right',
+      newestOnTop: false,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

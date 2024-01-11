@@ -44,4 +44,3 @@ const sample_category = [
 ];
 
 module.exports = { sample_category };
-

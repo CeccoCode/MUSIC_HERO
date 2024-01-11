@@ -18,7 +18,7 @@ export class ProductService {
 
   getLastFeatured(): Observable<Product[]> {
     return this.getAll().pipe(
-      map(prodotti => prodotti.slice(-9))
+      map(prodotti => prodotti.slice(-5))
     );
   }
 

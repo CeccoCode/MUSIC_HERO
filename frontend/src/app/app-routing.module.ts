@@ -4,6 +4,7 @@ import { ProductsComponent } from './components/pages/products/products.componen
 import { HomeComponent } from './components/pages/home/home.component';
 import { ProductPageComponent } from './components/pages/product-page/product-page.component';
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
+import { LoginModalComponent } from './components/partials/login-modal/login-modal.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
