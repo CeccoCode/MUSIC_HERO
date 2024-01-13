@@ -1,11 +1,19 @@
 .card {
     border: 1px solid #507dbc;
     margin-bottom: 10px;
+    /* Larghezza fissa */
     width: 12em;
+    /* Altezza fissa */
+    height: 20em;
     background-color: #fff;
     padding: 1em;
     border-radius: 10px;
     transition: .5s;
+    /* Impedisce al contenuto di fuoriuscire */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 span {

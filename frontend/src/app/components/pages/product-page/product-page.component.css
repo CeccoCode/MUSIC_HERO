@@ -1,5 +1,5 @@
 * {
-    color: white;
+    color: black;
 }
 
 .center {
@@ -35,7 +35,8 @@
 
 .title {
     font-size: 1.5rem;
-    color: white;
+    color: black;
+    font-weight: bold;
 }
 
 .price-row {

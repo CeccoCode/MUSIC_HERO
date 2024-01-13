@@ -13,10 +13,11 @@ import { ProductCardComponent } from './components/partials/product-card/product
 import { ProductPageComponent } from './components/pages/product-page/product-page.component';
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
 import { TitleComponent } from './components/partials/title/title.component';
-import { LoginModalComponent } from './components/partials/login-modal/login-modal.component';
+import { LoginModalComponent } from './components/modal/login-modal/login-modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InputContainerComponent } from './components/partials/input-container/input-container.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CartPageComponent,
     TitleComponent,
     LoginModalComponent,
+    InputContainerComponent,
   ],
   imports: [
     BrowserModule,

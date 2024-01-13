@@ -1,20 +1,20 @@
+require('dotenv').config();
+
 // Import del modulo Express
 const express = require('express');
-
 // Creazione applicazione Express
 const app = express();
-
 // Import middleware Cors
 const cors = require('cors');
+app.use(express.static('public'));
 
-// Import JsonWebToken
-const jwt = require('jsonwebtoken');
+const dbConnect = require('./config/database.config');
+dbConnect();
 
 // Import delle rotte
-const productRoute = require('./routers/product.router');
-const categoryRoute = require('./routers/category.router');
-const { sample_users } = require('./user');
-
+const productRouter = require('./routers/product.router');
+const categoryRouter = require('./routers/category.router');
+const userRouter = require('./routers/user.router');
 
 app.use(express.json());
 // Utilizzo di cors per consentire richieste da http://localhost:4200
@@ -24,30 +24,9 @@ app.use(cors({
 }));
 
 // Utilizzo delle rotte importate
-app.use("/api/products", productRoute);
-app.use("/api/categories", categoryRoute);
-
-
-app.post("/api/users/login", (req, res) => {
-    const { email, password } = req.body;
-    const user = sample_users.find(user => user.email === email && user.password === password);
-
-    if (user) {
-        res.send(generateTokenResponse(user));
-    } else {
-        res.status(400).send("User name or password is not valid");
-    }
-});
-
-const generateTokenResponse = (user => {
-    const token = jwt.sign({
-        email: user.email, isAdmin: user.isAdmin
-    }, "SomeRandomText", {
-        expiresIn: "30d"
-    });
-    user.token = token;
-    return user;
-});
+app.use("/api/products", productRouter);
+app.use("/api/categories", categoryRouter);
+app.use("/api/users", userRouter);
 
 // Avvia il server  
 const port = process.env.PORT || 3000;

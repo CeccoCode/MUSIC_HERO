@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Product } from '../shared/models/Product';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { PRODUCT_ID_URL, PRODUCTS_URL } from '../shared/constants/urls';
+import { PRODUCTS_URL } from '../shared/constants/urls';
 import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -23,7 +23,7 @@ export class ProductService {
   }
 
   getProductById(productId: string): Observable<Product> {
-    return this.http.get<Product>(`${PRODUCT_ID_URL}/${productId}`);
+    return this.http.get<Product>(`${PRODUCTS_URL}/${productId}`);
   }
 
 }
