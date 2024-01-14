@@ -1,0 +1,33 @@
+<div class="signup">
+    <form [formGroup]="registerForm" (ngSubmit)="submit()">
+        <label for="chk" aria-hidden="true">Sign up</label>
+        <input type="text" name="name" placeholder="Name" formControlName="name">
+        <div class="error-list" *ngIf="fc['name'].errors && isSubmitted">
+            <div *ngIf="fc['name'].errors['required']">*Campo nome obbligatorio</div>
+        </div>
+
+        <input type="email" name="email" placeholder="Email" formControlName="email">
+        <div class="error-list" *ngIf="fc['email'].errors && isSubmitted">
+            <div *ngIf="fc['email'].errors['required']">*Campo email obbligatorio</div>
+            <div *ngIf="fc['email'].errors['email']">Email errata</div>
+        </div>
+
+        <input type="password" name="password" placeholder="Password" formControlName="password">
+        <div class="error-list" *ngIf="fc['password'].errors && isSubmitted">
+            <div *ngIf="fc['password'].errors['required']">*Campo password obbligatorio</div>
+        </div>
+
+        <input type="password" name="confirmPassword" placeholder="Confirm Password" formControlName="confirmPassword">
+        <div class="error-list" *ngIf="fc['confirmPassword'].errors && isSubmitted">
+            <div *ngIf="fc['confirmPassword'].errors['required']">*Conferma password obbligatoria</div>
+            <div *ngIf="fc['confirmPassword'].errors['notMatch']">Le password non corrispondono</div>
+        </div>
+
+        <input type="text" name="address" placeholder="Address" formControlName="address">
+        <div class="error-list" *ngIf="fc['address'].errors && isSubmitted">
+            <div *ngIf="fc['address'].errors['required']">*Indirizzo obbligatorio</div>
+        </div>
+
+        <button type="submit">Sign up</button>
+    </form>
+</div>

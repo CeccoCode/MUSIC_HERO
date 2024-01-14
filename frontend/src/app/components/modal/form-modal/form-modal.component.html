@@ -1,0 +1,9 @@
+<div *ngIf="isOpen" class="modal" (click)="close()">
+    <div class="topContainer" (click)="$event.stopPropagation()">
+        <input type="checkbox" id="chk" aria-hidden="true">
+        <app-register (closeModal)="close()"></app-register>
+        <div class="login">
+            <app-login (closeModal)="close()"></app-login>
+        </div>
+    </div>
+</div>

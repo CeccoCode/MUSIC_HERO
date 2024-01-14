@@ -13,12 +13,17 @@ import { ProductCardComponent } from './components/partials/product-card/product
 import { ProductPageComponent } from './components/pages/product-page/product-page.component';
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
 import { TitleComponent } from './components/partials/title/title.component';
-import { LoginModalComponent } from './components/modal/login-modal/login-modal.component';
+import { FormModalComponent } from './components/modal/form-modal/form-modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InputContainerComponent } from './components/partials/input-container/input-container.component';
 import { CategoryProductsComponent } from './components/pages/category-products/category-products.component';
+import { RegisterComponent } from './components/modal/register/register.component';
+import { LoginComponent } from './components/modal/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
+import { OrderItemsListComponent } from './components/partials/order-items-list/order-items-list.component';
 
 @NgModule({
   declarations: [
@@ -32,11 +37,16 @@ import { CategoryProductsComponent } from './components/pages/category-products/
     ProductPageComponent,
     CartPageComponent,
     TitleComponent,
-    LoginModalComponent,
+    FormModalComponent,
     InputContainerComponent,
     CategoryProductsComponent,
+    RegisterComponent,
+    LoginComponent,
+    CheckoutPageComponent,
+    OrderItemsListComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,

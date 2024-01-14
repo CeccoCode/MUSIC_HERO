@@ -1,23 +1,15 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from 'src/app/services/user.service';
-import { PasswordMatchValidator } from 'src/app/shared/validators/password_match_validator';
 
 @Component({
-  selector: 'app-login-modal',
-  templateUrl: './login-modal.component.html',
-  styleUrls: ['./login-modal.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class LoginModalComponent implements OnInit {
-
+export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
-  registerForm!: FormGroup;
-  registerSubmitted = false;
   isSubmitted = false;
-
-  constructor(private formBuilder: FormBuilder,
-    private userService: UserService,
-  ) { }
 
   @Input() isOpen: boolean = false;
   @Output() closeModal = new EventEmitter<void>();
@@ -26,22 +18,16 @@ export class LoginModalComponent implements OnInit {
     this.closeModal.emit();
   }
 
+  constructor(private formBuilder: FormBuilder,
+    private userService: UserService,
+  ) { }
+
   ngOnInit(): void {
     //Login
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
     });
-    //Register 
-    this.registerForm = this.formBuilder.group({
-      name: ['', [Validators.required, Validators.minLength(4)]],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(5)]],
-      confirmPassword: ['', Validators.required],
-      address: ['', [Validators.required, Validators.minLength(10)]]
-    }, {
-      validators: PasswordMatchValidator('password', 'confirmPassword')
-    })
   }
 
   get fc() {

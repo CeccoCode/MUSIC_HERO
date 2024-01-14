@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="content">
+        <app-title title="Order Form" fontSize="1.7rem"></app-title>
+        <form [formGroup]="checkoutForm">
+            <div>
+                <label for="name">Name</label>
+                <input id="name" type="text" formControlName="name">
+                <div *ngIf="fc['name'].errors?.['required'] && (fc['name'].touched || fc['name'].dirty)">
+                    Name is required.
+                </div>
+            </div>
+            <div>
+                <label for="address">Address</label>
+                <input id="address" type="text" formControlName="address">
+                <div *ngIf="fc['address'].errors?.['required'] && (fc['address'].touched || fc['address'].dirty)">
+                    Address is required.
+                </div>
+            </div>
+        </form>
+        <app-order-items-list [order]="order"></app-order-items-list>
+    </div>
+    <div class="buttons-container">
+        <div class="buttons">
+            <button (click)="createOrder()">Go To Payment</button>
+        </div>
+    </div>
+</div>

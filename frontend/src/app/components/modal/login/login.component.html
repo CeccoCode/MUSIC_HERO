@@ -1,0 +1,16 @@
+<div class="login">
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+        <label for="chk" aria-hidden="true">Login</label>
+        <input type="email" name="email" placeholder="Email" formControlName="email">
+        <div class="error-list" *ngIf="fc['email'].errors && isSubmitted">
+            <div *ngIf="fc['email'].errors['required']">*Campo email obbligatorio</div>
+            <div *ngIf="fc['email'].errors['email']">Email errata</div>
+        </div>
+
+        <input type="password" name="pswd" placeholder="Password" formControlName="password">
+        <div class="error-list" *ngIf="fc['password'].errors && isSubmitted">
+            <div *ngIf="fc['password'].errors['required']">*Campo password obbligatorio</div>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+</div>
