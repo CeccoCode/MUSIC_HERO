@@ -1,10 +1,21 @@
 <div class="center">
     <div class="col-wrapper">
-        <div class="white-box">
-            <div class="big-image-wr">
-                <img class="big-image" [src]="product.images">
+        <!-- Colonna per l'immagine principale e le miniature -->
+        <div>
+            <div class="white-box">
+                <!-- Immagine principale -->
+                <div class="big-image-wr">
+                    <img class="big-image" [src]="selectedImage">
+                </div>
+            </div>
+            <!-- Miniature (fuori dalla white-box) -->
+            <div class="thumbnails" *ngIf="product.images.length > 1">
+                <div class="thumbnail" *ngFor="let image of product.images" (click)="selectedImage = image">
+                    <img [src]="image">
+                </div>
             </div>
         </div>
+        <!-- Colonna per i dettagli del prodotto -->
         <div>
             <div class="title">
                 {{product.title}}
@@ -13,12 +24,20 @@
             <div class="price-row">
                 <div>
                     <div class="price">
-
+                        {{product.price}}€
                     </div>
                 </div>
                 <div>
                     <div class="button">
-
+                        <button (click)="addToCart()"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                viewBox="0 0 24 24" class="cart-icon">
+                                <circle cx="10.5" cy="19.5" r="1.5"></circle>
+                                <circle cx="17.5" cy="19.5" r="1.5"></circle>
+                                <path d="M13 13h2v-2.99h2.99v-2H15V5.03h-2v2.98h-2.99v2H13V13z"></path>
+                                <path
+                                    d="M10 17h8a1 1 0 0 0 .93-.64L21.76 9h-2.14l-2.31 6h-6.64L6.18 4.23A2 2 0 0 0 4.33 3H2v2h2.33l4.75 11.38A1 1 0 0 0 10 17z">
+                                </path>
+                            </svg>Add to Cart</button>
                     </div>
                 </div>
             </div>

@@ -1,8 +1,6 @@
 const express = require('express');
-const { sample_category } = require('../data');
 const asyncHandler = require('express-async-handler');
 const CategoryModel = require('../models/category.model');
-const ProductModel = require('../models/product.model');
 const router = express.Router();
 
 
@@ -34,13 +32,5 @@ router.get("/parent", asyncHandler(
     }
 ));
 
-
-router.get("/:categoryId", asyncHandler(
-    async (req, res) => {
-        const { categoryId } = req.params;
-        const products = await ProductModel.find({ category: categoryId });
-        res.send(products);
-    }
-));
 
 module.exports = router;

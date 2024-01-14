@@ -17,7 +17,7 @@ export class ProductCardComponent {
 
   addToCart() {
     this.cartService.addToCart(this.product);
-    this.router.navigateByUrl('/cart-page');
+    this.router.navigateByUrl('/cart');
   }
 
   toggleFavorite() {

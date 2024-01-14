@@ -1,5 +1,4 @@
 const express = require('express');
-const { sample_product } = require('../products');
 const asyncHandler = require('express-async-handler');
 const ProductModel = require('../models/product.model');
 const router = express.Router();
@@ -39,5 +38,13 @@ router.get("/:id", asyncHandler(
     }
 ));
 
+
+router.get("/category/:categoryId", asyncHandler(
+    async (req, res) => {
+        const { categoryId } = req.params;
+        const products = await ProductModel.find({ category: categoryId });
+        res.send(products);
+    }
+));
 
 module.exports = router; 

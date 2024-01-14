@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
+import { PasswordMatchValidator } from 'src/app/shared/validators/password_match_validator';
 
 @Component({
   selector: 'app-login-modal',
@@ -11,12 +11,12 @@ import { UserService } from 'src/app/services/user.service';
 export class LoginModalComponent implements OnInit {
 
   loginForm!: FormGroup;
+  registerForm!: FormGroup;
+  registerSubmitted = false;
   isSubmitted = false;
 
   constructor(private formBuilder: FormBuilder,
     private userService: UserService,
-    private activatedRoute: ActivatedRoute,
-    private router: Router
   ) { }
 
   @Input() isOpen: boolean = false;
@@ -27,10 +27,21 @@ export class LoginModalComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    //Login
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
     });
+    //Register 
+    this.registerForm = this.formBuilder.group({
+      name: ['', [Validators.required, Validators.minLength(4)]],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(5)]],
+      confirmPassword: ['', Validators.required],
+      address: ['', [Validators.required, Validators.minLength(10)]]
+    }, {
+      validators: PasswordMatchValidator('password', 'confirmPassword')
+    })
   }
 
   get fc() {

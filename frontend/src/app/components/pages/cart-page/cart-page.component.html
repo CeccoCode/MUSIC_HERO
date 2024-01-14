@@ -3,7 +3,7 @@
     <ul>
         <li *ngFor="let cartItem of cart.items">
             <div>
-                <img [src]="cartItem.product.images">
+                <img [src]="cartItem.product.images[0]">
             </div>
             <div>
                 <a routerLink="/product/{{cartItem.product._id}}">

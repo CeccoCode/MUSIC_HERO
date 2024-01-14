@@ -29,6 +29,7 @@ export class HeaderComponent implements OnInit {
 
   logout() {
     this.userService.logout();
+    window.location.reload();
   }
 
   get isAuth() {

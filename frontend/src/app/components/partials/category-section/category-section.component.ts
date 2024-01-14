@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 import { CategoryService } from 'src/app/services/category.service';
 import { Category } from 'src/app/shared/models/Category';
 
@@ -11,17 +11,19 @@ import { Category } from 'src/app/shared/models/Category';
 export class CategorySectionComponent implements OnInit {
 
   categories: Category[] = [];
-  constructor(private categoryService: CategoryService) {
-    let categoryObservable: Observable<Category[]>
-    categoryObservable = categoryService.getAllParent();
 
-    categoryObservable.subscribe((serverCategories) => {
-      this.categories = serverCategories;
-    })
-  }
+  constructor(
+    private categoryService: CategoryService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
-
+    this.categoryService.getAllParent().subscribe((serverCategories) => {
+      this.categories = serverCategories;
+    });
   }
 
+  navigateToCategory(categoryId: string) {
+    this.router.navigate(['/category', categoryId]);
+  }
 }

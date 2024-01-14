@@ -10,7 +10,7 @@
 
 .col-wrapper {
     display: grid;
-    grid-template-columns: .8fr 1.2fr;
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
     margin-top: 40px;
 }
@@ -33,6 +33,26 @@
     height: auto;
 }
 
+
+.thumbnails {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.thumbnail {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
 .title {
     font-size: 1.5rem;
     color: black;
@@ -46,6 +66,30 @@
 }
 
 .price {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+    color: black;
+    font-weight: bolder;
+}
+
+.button button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #5cb85c;
     color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button button:hover {
+    background-color: #4cae4c;
+    transform: scale(1.1);
+}
+
+.cart-icon {
+    fill: white;
 }
