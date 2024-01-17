@@ -6,7 +6,7 @@
     </tr>
     <tr *ngFor="let item of order.items">
         <td>
-            <a routerLink="/food/{{item.product._id}}">
+            <a routerLink="/product/{{item.product._id}}">
                 <img [src]="item.product.images[0]">
             </a>
         </td>

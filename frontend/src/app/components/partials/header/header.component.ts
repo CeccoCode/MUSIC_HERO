@@ -18,6 +18,10 @@ export class HeaderComponent implements OnInit {
     })
   }
 
+  get isAdmin() {
+    return this.userService.isAdmin;
+  }
+
   openLoginModal(): void {
     this.isLoginModalOpen = true;
   }

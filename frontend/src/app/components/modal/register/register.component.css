@@ -83,18 +83,12 @@ button:hover {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    /* Rimuove i bullet points */
 }
 
 .error-list>div {
     margin-top: 4px;
-    /* Spazio ridotto sopra il messaggio di errore */
     margin-bottom: 4px;
-    /* Spazio ridotto sotto il messaggio di errore */
     font-size: 0.8em;
-    /* Dimensione del font ridotta */
     color: rgb(181, 0, 0);
-    /* Colore del testo per l'errore */
     text-align: center;
-    /* Centra il testo */
 }

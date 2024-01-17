@@ -8,7 +8,7 @@
                     <img class="big-image" [src]="selectedImage">
                 </div>
             </div>
-            <!-- Miniature (fuori dalla white-box) -->
+            <!-- Miniature -->
             <div class="thumbnails" *ngIf="product.images.length > 1">
                 <div class="thumbnail" *ngFor="let image of product.images" (click)="selectedImage = image">
                     <img [src]="image">

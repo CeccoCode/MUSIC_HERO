@@ -1,9 +1,10 @@
 <app-form-modal [isOpen]="isLoginModalOpen" (closeModal)="closeLoginModal()"></app-form-modal>
 <header class="header">
-    <a href="#" class="logo">HeroMusic.</a>
+    <a href="/" class="logo">HeroMusic.</a>
     <nav class="navbar">
         <a routerLink="/" class="active">Home</a>
         <a routerLink="/products">Products</a>
+        <a *ngIf="isAdmin" routerLink="/admin-panel">Admin</a>
     </nav>
     <div class="actions">
         <a routerLink="/cart">

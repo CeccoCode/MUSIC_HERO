@@ -20,6 +20,10 @@ export class UserService {
     this.userObservable = this.userSubject.asObservable();
   }
 
+  public get isAdmin(): boolean {
+    const currentUser = this.userSubject.value;
+    return currentUser && currentUser.isAdmin;
+  }
 
   public get currentUser(): User {
     return this.userSubject.value;

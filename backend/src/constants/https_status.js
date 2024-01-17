@@ -1,2 +1,6 @@
 const HTTP_BAD_REQUEST = 400;
-module.exports.HTTP_BAD_REQUEST = HTTP_BAD_REQUEST;
+const HTTP_UNAUTHORIZED = 401;
+module.exports = {
+    HTTP_BAD_REQUEST,
+    HTTP_UNAUTHORIZED
+};

@@ -1,0 +1,42 @@
+<div class="admin-panel">
+    <h1>Pannello di Amministrazione</h1>
+
+    <section class="add-product-section">
+        <h2>Aggiungi Prodotto</h2>
+        <form (ngSubmit)="addProduct()">
+            <input type="text" [(ngModel)]="newProduct.title" name="title" required placeholder="Titolo del prodotto">
+            <textarea [(ngModel)]="newProduct.description" name="description" required
+                placeholder="Descrizione del prodotto"></textarea>
+            <input type="number" [(ngModel)]="newProduct.price" name="price" required placeholder="Prezzo del prodotto">
+            <input type="text" [(ngModel)]="imagePaths" name="images" required
+                placeholder="Percorsi delle immagini separati da virgola">
+            <select [(ngModel)]="newProduct.category" name="category" required>
+                <option value="" disabled selected>Categoria del prodotto</option>
+                <option *ngFor="let category of categories" [value]="category._id">{{ category.name }}</option>
+            </select>
+            <button type="submit">Crea Prodotto</button>
+        </form>
+    </section>
+
+    <section class="product-list-section">
+        <h2>Lista Prodotti</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Prezzo</th>
+                    <th>Azioni</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products">
+                    <td>{{ product.title }}</td>
+                    <td>{{ product.price | currency }}</td>
+                    <td>
+                        <button (click)="deleteProduct(product._id)">Elimina</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</div>

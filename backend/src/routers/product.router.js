@@ -47,4 +47,32 @@ router.get("/category/:categoryId", asyncHandler(
     }
 ));
 
+
+// Rotta POST per aggiungere un nuovo prodotto
+router.post("/", asyncHandler(
+    async (req, res) => {
+        // Crea un nuovo oggetto prodotto escludendo il campo _id
+        const productData = req.body;
+        delete productData._id; // Assicurati che _id non sia incluso
+
+        const newProduct = new ProductModel(productData);
+        const savedProduct = await newProduct.save();
+        res.status(201).send(savedProduct);
+    }
+));
+
+// Rotta DELETE per eliminare un prodotto esistente
+router.delete("/:id", asyncHandler(
+    async (req, res) => {
+        const { id } = req.params;
+        const deletedProduct = await ProductModel.findByIdAndDelete(id);
+        if (deletedProduct) {
+            res.status(200).send({ message: 'Prodotto eliminato con successo' });
+        } else {
+            res.status(404).send({ message: 'Prodotto non trovato' });
+        }
+    }
+));
+
+
 module.exports = router; 

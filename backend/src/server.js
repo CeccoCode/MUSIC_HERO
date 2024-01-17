@@ -15,6 +15,7 @@ dbConnect();
 const productRouter = require('./routers/product.router');
 const categoryRouter = require('./routers/category.router');
 const userRouter = require('./routers/user.router');
+const orderRouter = require('./routers/order.router');
 
 app.use(express.json());
 // Utilizzo di cors per consentire richieste da http://localhost:4200
@@ -27,6 +28,8 @@ app.use(cors({
 app.use("/api/products", productRouter);
 app.use("/api/categories", categoryRouter);
 app.use("/api/users", userRouter);
+app.use("/api/orders", orderRouter);
+
 
 // Avvia il server  
 const port = process.env.PORT || 3000;
